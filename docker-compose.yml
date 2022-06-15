@@ -1,0 +1,22 @@
+version: "3.7"
+services:
+  nginx:
+    container_name: nginx
+    build: docker/nginx
+    volumes:
+      - ./src/:/app
+    ports:
+      - 8000:80
+    networks:
+      - app
+
+  php:
+    container_name: php
+    build: docker/php
+    volumes:
+      - ./src/:/app
+    networks:
+      - app
+
+networks:
+  app:
