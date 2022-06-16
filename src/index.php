@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 require_once realpath('vendor/autoload.php');
 
@@ -13,4 +14,4 @@ function canDrink(DrinkType $drinkType, Country $country, int $age): bool
     return $countryCanDrink::handler($age, $drinkType);
 }
 
-echo canDrink(DrinkType::CERVEJA, Country::ARGENTINA, 17) ? 'sim' : 'nao';
+echo canDrink(DrinkType::CERVEJA, Country::BOLIVIA, 22) ? 'sim' : 'nao';

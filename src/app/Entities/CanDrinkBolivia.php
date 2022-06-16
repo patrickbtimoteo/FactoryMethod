@@ -5,9 +5,9 @@ namespace App\Entities;
 use App\Entities\Interfaces\CanDrink;
 use App\Enums\DrinkType;
 
-class CanDrinkLibya implements CanDrink
+class CanDrinkBolivia implements CanDrink
 {
-    const AGE_MAX = 1000;
+    const AGE_MAX = 21;
 
     public static function handler(int $age, DrinkType $drinkType): bool
     {
